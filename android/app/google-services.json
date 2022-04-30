@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "791222948145",
+    "project_id": "chat-app-2cd5d",
+    "storage_bucket": "chat-app-2cd5d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:791222948145:android:dde2624347850dde282010",
+        "android_client_info": {
+          "package_name": "tharlar.site.chat_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "791222948145-b00buhja3kll6n6m9ouv8lkd4cj845ct.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tharlar.site.chat_app",
+            "certificate_hash": "67bc55278384ac92a5d79cfba2259d3128bef18f"
+          }
+        },
+        {
+          "client_id": "791222948145-nu6hf62lian7q4noec7ura9a8ok3b41r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAamLLHoDFjgLuLseXgSEDutqnaphLzG9w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "791222948145-nu6hf62lian7q4noec7ura9a8ok3b41r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

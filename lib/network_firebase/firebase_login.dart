@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:chat_app/network_firebase/firebase_network.dart';
+import 'package:chat_app/screen/otp_login_screen.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:flutter/material.dart';
@@ -69,6 +70,20 @@ class _FirebaseLoginState extends State<FirebaseLogin> {
             },
       child: const Text('Log in anonymously'),
     );
+    final otpLogin = MaterialButton(
+      color: Colors.deepOrange,
+      onPressed: _busy
+          ? null
+          : () async {
+              setState(() => _busy = true);
+              Navigator.of(context).pushAndRemoveUntil(
+                  MaterialPageRoute(
+                      builder: (context) => const OTPLoginScreen()),
+                  (Route<dynamic> route) => false);
+              setState(() => _busy = false);
+            },
+      child: const Text('Log in OTP'),
+    );
     final signOutBtn = TextButton(
       onPressed: _busy
           ? null
@@ -82,11 +97,13 @@ class _FirebaseLoginState extends State<FirebaseLogin> {
     return Scaffold(
       body: Center(
         child: ListView(
-          padding: const EdgeInsets.symmetric(vertical: 100.0, horizontal: 50.0),
+          padding:
+              const EdgeInsets.symmetric(vertical: 100.0, horizontal: 50.0),
           children: <Widget>[
             statusText,
             googleLoginBtn,
             anonymousLoginBtn,
+            otpLogin,
             signOutBtn,
           ],
         ),
